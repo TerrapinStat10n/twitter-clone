@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static '/post/styles.css' %}">
+    <title>Sample Twitter</title>
+	<link rel="icon" type="image/png" sizes="96x96" href="{% static 'post/images/favicon.png' %}">
+	<meta name=”viewport” content=”width=device-width, initial-scale=1”>
+</head>
+<body>
+	<div class="content">
+		
+		<header>
+			<a href="javascript:history.back()">
+				<img class="header-back" src="{% static 'post/images/back.svg' %}">
+			</a>
+			<h1>Post Tweet</h1>
+			<button type="submit" class="header-button" form="tweetForm" value="submit">Tweet</button>
+		</header>
+
+		<main onload="imgResize()">
+
+		<!-- Post Tweet Form -->
+		<div class="tweet-form">
+
+			<div class="tweet-form-icon">
+				<img id="defaultIcon" src="{% static 'post/images/post-default-icon.svg' %}">
+			</div>
+			<div class="tweet-form-content">
+				<form action="add-tweet" method="post" id="tweetForm" enctype="multipart/form-data">{% csrf_token %}
+				<input class="tweet-name" type="text" placeholder="Your post name" name="name" id="username">
+				
+				<textarea class="tweet-textarea" name="text" id="tweet-text" placeholder="What’s happening?" rows="7" cols="100"></textarea>
+
+				<div class="image-upload">
+  					<label for="file-input">
+    					<img class="tweet-form-image" src="{% static 'post/images/image.svg' %}" alt="Upload photos.">
+  					</label>
+					<input id="file-input" type="file" name="photo" /><br><em>Upload photo</em>
+
+				</div>
+				</form>
+			</div>
+		</div>
+
+		</main>
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/post/twitter.js"></script>
+</body>
+</html>

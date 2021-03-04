@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static '/post/styles.css' %}">
+    <title>Sample Twitter</title>
+	<link rel="icon" type="image/png" sizes="96x96" href="{% static 'post/images/favicon.png' %}">
+	<meta name=”viewport” content=”width=device-width, initial-scale=1”>
+</head>
+<body>
+	<div class="content">
+		
+		<header>
+			<a href="javascript:history.back()">
+				<img class="header-back" src="{% static 'post/images/back.svg' %}"></a>
+			<h1>Tweet</h1>
+		</header>
+
+		<main>
+			{% for post in posts %}
+			<!-- Sample Tweet 1 -->
+			<div class="tweet">
+				<div class="tweet-icon">
+					<img src="{% static 'post/images/post-default-icon.svg' %}">
+				</div>
+				<div class="tweet-content">
+					<div class="tweet-name-area">
+						<span class="tweet-name">{{ post.name }}</span>
+						<span class="tweet-created-at">{{ post.created_at }}</span>
+					</div>
+					<p>
+                        {{ post.text }}
+                    </p>
+					{% if post.image_path %}
+					<img class="tweet-image" src="{% static post.image_path %}">
+					{% endif %}
+				</div>
+			</div>
+			{% endfor %}
+			{% for reply in replies %}
+			{% if forloop.first %}
+			<div class="tweet-detail-bottom">
+				<div class="tweet-detail-reply">{{ forloop.revcounter }} <span>Replies</span></div>
+				<div class="tweet-detail-like">22 <span>Likes</span></div>
+			</div>
+			{% endif %}
+			<div class="tweet">
+				<div class="tweet-icon">
+					<img src="{% static 'post/images/post-default-icon.svg' %}">
+				</div>
+				<div class="tweet-content">
+					<div class="tweet-name-area">
+						<span class="tweet-name">{{ reply.name }}</span>
+						<span class="tweet-created-at">{{ reply.created_at }}</span>
+					</div>
+					<p>
+                        {{ reply.text }}
+                    </p>
+					{% if reply.image_path %}
+					<img class="tweet-image" src="{% static reply.image_path %}">
+					{% endif %}
+				</div>
+			</div>
+			{% endfor %}
+
+		</main>
+
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/post/twitter.js"></script>
+</body>
+</html>
