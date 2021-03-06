@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+{% load cloudinary %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -31,13 +32,13 @@
 					<p>
 						{{ post.text }}
 					</p>
-					{% if post.image_path %}
-					<img class="tweet-image" src="{% static post.image_path %}"></a>
+					{% if post.image_path.url %}
+					<img class="tweet-image" src="{{ post.image_path.url }}"></a>
 					{% endif %}
 					<div class="tweet-buttons">
 						<a href="{% url 'reply' post.id %}">
 						<img class="tweet-reply" src="{% static 'post/images/comment.svg' %}"></a>
-						<div class="tweet-reply-count">12</div>
+						<div class="tweet-reply-count">{{ post.reply_count }}</div>
 						<img class="tweet-like" src="{% static 'post/images/heart.svg' %}">
 						<div class="tweet-like-count">22</div>
 					</div>

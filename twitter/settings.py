@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import django_heroku
 from pathlib import Path
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -37,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'post'
+    'post',
+    'cloudinary'
 ]
 
 MIDDLEWARE = [
@@ -126,3 +130,9 @@ STATIC_ROOT = 'C:/Users/Michele/PycharmProjects/TotalDjango/twitter/post/static/
 
 
 django_heroku.settings(locals())
+
+cloudinary.config(
+    cloud_name="djhvo5mnu",
+    api_key="428418617293135",
+    api_secret="7tc-YXosM9gRGRNzNPjFRr2cLC8"
+)

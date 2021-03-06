@@ -8,6 +8,9 @@ from .models import TwitterDjango
 def main(request):
     user_post = TwitterDjango.objects.filter(parent_tweet_id=0).order_by('-created_at')
 
+    for post in user_post:
+        post.reply_count = TwitterDjango.objects.filter(parent_tweet_id=post.id).count()
+
     context = {
         'posts': user_post
     }
@@ -55,7 +58,7 @@ def tweet_post(request, id=0):
     else:
         image_path = None
 
-    post = TwitterDjango(name=name, text=text, image_path=image_path, parent_tweet_id=parent_tweet_id)
+    post = TwitterDjango(name=name, text=text, image_path=request.FILES.get("photo", None), parent_tweet_id=parent_tweet_id)
     post.save()
 
     return redirect(reverse('main'))

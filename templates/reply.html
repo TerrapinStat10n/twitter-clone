@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
-
+{% load cloudinary %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -32,6 +32,7 @@
 					<span class="tweet-created-at">{{ post.created_at }}</span>
 				</div>
 				<p>{{ post.text }}</p>
+				<p><img src="{{ post.image_path.url }}" /></p>
 			</div>
 		</div>
 
