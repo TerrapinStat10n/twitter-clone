@@ -33,6 +33,7 @@
 						{{ post.text }}
 					</p>
 					{% if post.image_path.url %}
+
 					<img class="tweet-image" src="{{ post.image_path.url }}"></a>
 					{% endif %}
 					<div class="tweet-buttons">
@@ -40,7 +41,7 @@
 						<img class="tweet-reply" src="{% static 'post/images/comment.svg' %}"></a>
 						<div class="tweet-reply-count">{{ post.reply_count }}</div>
 						<img class="tweet-like" src="{% static 'post/images/heart.svg' %}">
-						<div class="tweet-like-count">22</div>
+						<div class="tweet-like-count">{{ post.reply_count }}</div>
 					</div>
 				</div>
 			</div>
