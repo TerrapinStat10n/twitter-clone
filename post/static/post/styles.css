@@ -130,23 +130,24 @@ main {
 }
 
 .post-tweet-button img {
-	width: 20%;
+	width: 100%;
 }
 
-@media (min-width: 1000px) {
-	.post-tweet-button {
+@media only screen and (min-width: 1000px) {
+	.post-tweet-button img {
 		width: 33%;
 		right: 14%;
 	}
 }
 
-@media (max-width: 500px) {
+@media only screen and (max-width: 500px) {
 	.post-tweet-button {
-		width: 15%;
 		right: 0;
 	}
+	.post-tweet-button img {
+	width: 100%;
+	}
 }
-
 
 /***** EACH TWEET DESIGN **********/
 a:link {
