@@ -21,7 +21,7 @@ Twitter clone Django project
 ## &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4. Activate the virtual env
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For MacOS and Ubuntu
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; source django_app_name/bin/activate
-### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For Windows, run:
+### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; For Windows, run:
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .\django_app_name\Scripts\activate
 
 ## &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5. Install dependencies
@@ -29,11 +29,12 @@ Twitter clone Django project
 
 
 
-## Once installed, enter this command, to launch the project locally:
-## &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; python manage.py runserver
+
+### Once installed, enter this command, to launch the project locally:
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; python manage.py runserver
 
 
-## No user account information required. No login functionality has been implemented yet.
+#### No user account information required. No login functionality has been implemented yet.
 
 
 ## Contact:
