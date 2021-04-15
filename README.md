@@ -10,7 +10,7 @@ Twitter clone Django project
 # Installation -- To get a local copy up and running follow these simple steps:
 
 ## &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1. Clone the repo, using the command:
-#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; git clone https://github.com/TerrapinStat10n/todolist.git
+#### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; git clone https://github.com/TerrapinStat10n/twitter-clone.git
 
 ## &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2. To install "virtual env" and "virtual env wrapper", run command: 
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; python3
