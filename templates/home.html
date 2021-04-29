@@ -39,9 +39,7 @@
 					<div class="tweet-buttons">
 						<a href="{% url 'reply' post.id %}">
 						<img class="tweet-reply" src="{% static 'post/images/comment.svg' %}"></a>
-						<div class="tweet-reply-count">{{ post.reply_count }}</div>
-						<img class="tweet-like" src="{% static 'post/images/heart.svg' %}">
-						<div class="tweet-like-count">{{ post.reply_count }}</div>
+						<div class="tweet-reply-count">{{ post.reply_count }}</div>	
 					</div>
 				</div>
 			</div>
