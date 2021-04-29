@@ -6,6 +6,7 @@ body {
     padding: 0;
 	table-layout: fixed;
     word-wrap: break-word;
+
 }
 
 .content {
@@ -189,9 +190,13 @@ a:hover {
 }
 
 .tweet-content p {
-	font-size: 0.93rem;
+	font-size: 1.93rem;
 	padding: 0 0.3rem 0.2rem 0;
 	color: #353535;
+}
+
+.tweet-name {
+	font-size: 40px;
 }
 
 .tweet-image {
